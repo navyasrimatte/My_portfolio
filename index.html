@@ -191,19 +191,36 @@
       flex-wrap: wrap;
     }
 
-    #about .col-left {
-      flex: 1;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+   .image-ring {
+  width: 270px;
+  height: 270px;
+  padding: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, skyblue, hotpink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: breathe 3.6s ease-in-out infinite;
+  box-shadow:
+    0 0 30px rgba(255,105,180,0.7),
+    0 0 45px rgba(135,206,250,0.7);
+  margin: 0 auto;
+}
 
-    #about .col-left img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      border: 5px solid #00bfff;
-    }
+.image-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid black;
+  display: block;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
 
     #about .col-right {
       flex: 2;
@@ -386,9 +403,10 @@
   <section id="about" class="section">
     <div class="container">
       <div class="about">
-        <div class="col-left">
-          <img src="https://via.placeholder.com/250" alt="Navya Sri Matte" />
+        <div class="image-ring">
+    <img src="mee.jpg" alt="Navya Sri Matte">
         </div>
+
         <div class="col-right">
           <h2>About Me</h2>
           <p>
@@ -516,3 +534,4 @@
   </footer>
 </body>
 </html>
+
